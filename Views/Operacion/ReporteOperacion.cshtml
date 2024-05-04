@@ -1,0 +1,61 @@
+﻿@{
+    ViewData["Title"] = "Reporte de Operación";
+}
+<html>
+<head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            padding: 40px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        p {
+            margin-bottom: 15px;
+            color: #666;
+        }
+
+        a {
+            display: block;
+            padding: 10px;
+            background-color: #337ab7;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 4px;
+            text-align: center;
+            transition: background-color 0.3s;
+        }
+
+            a:hover {
+                background-color: #286090;
+            }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Reporte de Operación</h1>
+        <p>Retiro Exitoso</p>
+        <p>Cantidad Retirada: @ViewBag.Cantidad</p>
+        <p>Saldo Restante: @ViewBag.Saldo</p>
+        <a asp-controller="Home" asp-action="Inicio">Salir</a>
+    </div>
+</body>
+</html>

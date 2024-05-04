@@ -1,0 +1,14 @@
+          +-------------------+           +------------------+
+          |   Tarjetas        |           |   Operaciones    |
+          +-------------------+           +------------------+
+          | Id (PK)           |1       N | Id (PK)          |
+          | Numero            |---------| Idtarjeta (FK)   |
+          | Pin               |         | FechaHora        |
+          | Bloqueada         |         | CodigoOperacion  |
+          | Balance           |         | MontoRetirado    |
+          +-------------------+         +------------------+
+               |                             |
+               |                             |
+               +-----------------------------+
+                             1
+                             N

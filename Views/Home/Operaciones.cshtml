@@ -1,0 +1,67 @@
+﻿@{
+    ViewData["Title"] = "Operaciones";
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            padding: 40px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            text-align: center;
+        }
+
+        li {
+            margin-bottom: 20px;
+        }
+
+        a {
+            display: inline-block;
+            padding: 15px 40px;
+            background-color: #337ab7;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+            a:hover {
+                background-color: #286090;
+            }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Operaciones Disponibles</h1>
+        <ul>
+            <li><a asp-controller="Operacion" asp-action="Balance" asp-route-tarjetaId="@ViewBag.TarjetaId">Consultar Balance</a></li>
+            <li><a asp-controller="Operacion" asp-action="Retiro" asp-route-tarjetaId="@ViewBag.TarjetaId">Realizar Retiro</a></li>
+            <li><a asp-controller="Home" asp-action="Inicio">Atras</a></li>
+        </ul>
+    </div>
+</body>
+</html>

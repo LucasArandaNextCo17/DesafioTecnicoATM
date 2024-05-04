@@ -1,0 +1,71 @@
+﻿@{
+    ViewData["Title"] = "Ingreso de PIN";
+}
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            width: 400px;
+            padding: 40px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            color: #666;
+            margin-bottom: 5px;
+        }
+
+        input[type="number"],
+        input[type="password"] {
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button[type="submit"] {
+            padding: 10px;
+            background-color: #337ab7;
+            border: none;
+            border-radius: 4px;
+            color: #fff;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        </style>
+<h1>Ingreso de PIN</h1>
+
+<form method="post" asp-action="ValidarPin">
+    <label>Tarjeta ID: </label>
+    <input type="number" name="tarjetaId" value="@ViewBag.TarjetaId" readonly />
+    <label>PIN:</label>
+    <input type="password" name="pin" />
+    <button type="submit">Aceptar</button>
+</form>
+
+@if (ViewBag.ErrorMessage != null)
+{
+    <p>@ViewBag.ErrorMessage</p>
+}
